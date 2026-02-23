@@ -12,8 +12,8 @@ from models.user_model import User
 
 
 app = FastAPI(
-    title="Kadituxe Store API",
-    description="Kadituxe Store - API for orders management.",
+    title="Kadituxi Store API",
+    description="Kadituxi Store - API for orders management.",
     version="1.0",
 )
 
