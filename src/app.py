@@ -5,11 +5,8 @@ from routes import users_routes
 
 """
 from db.db import Base, engine
-from models.order_model import Order
-from models.product_model import Product
-from models.user_model import User
+from models import Order, Product, User
 """
-
 
 app = FastAPI(
     title="Kadituxi Store API",
