@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import uvicorn
 
-from routes import users_routes
+from routes import users_routes, product_routes
 
 """
 from db.db import Base, engine
@@ -15,6 +15,7 @@ app = FastAPI(
 )
 
 app.include_router(router=users_routes.users_router, prefix="/users")
+app.include_router(router=product_routes.products_router, prefix="/products")
 
 if __name__ == "__main__":
     # Base.metadata.create_all(engine)
