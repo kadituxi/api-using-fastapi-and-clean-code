@@ -1,7 +1,6 @@
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 
-from models.product_model import Product
 from repositories import product_repository
 from schemas.product_schemas import ProductCreateSchema, ProductUpdateSchema
 
