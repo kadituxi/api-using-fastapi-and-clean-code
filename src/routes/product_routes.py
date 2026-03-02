@@ -13,8 +13,10 @@ products_router = APIRouter(tags=["Products Routes"])
 
 
 @products_router.get("/")
-def get_all_products(session: Session = Depends(get_session)):
-    return product_service.get_all_products(session)
+def get_all_products(
+    limit: int = 6, skip: int = 0, session: Session = Depends(get_session)
+):
+    return product_service.get_products(session, limit, skip)
 
 
 @products_router.get("/{product_id}")

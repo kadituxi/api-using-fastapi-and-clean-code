@@ -5,8 +5,10 @@ from models.product_model import Product
 from schemas.product_schemas import ProductCreateSchema, ProductUpdateSchema
 
 
-def get_all_products(session: Session) -> list[Product]:
-    products = session.execute(select(Product)).scalars().all()
+def get_products(session: Session, limit: int, skip: int) -> list[Product]:
+    products = (
+        session.execute(select(Product).offset(skip).limit(limit)).scalars().all()
+    )
     return products
 
 

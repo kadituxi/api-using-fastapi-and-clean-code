@@ -5,8 +5,8 @@ from repositories import product_repository
 from schemas.product_schemas import ProductCreateSchema, ProductUpdateSchema
 
 
-def get_all_products(session: Session):
-    return product_repository.get_all_products(session)
+def get_products(session: Session, limit: int, skip: int):
+    return product_repository.get_products(session, limit, skip)
 
 
 def create_product(session: Session, payload: ProductCreateSchema):
