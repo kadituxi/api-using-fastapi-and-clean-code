@@ -2,7 +2,7 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 
 from repositories import product_repository
-from schemas.product_schemas import ProductCreateSchema, ProductUpdateSchema
+from schemas.product_schema import ProductCreateSchema, ProductUpdateSchema
 
 
 def get_products(session: Session, limit: int, skip: int):

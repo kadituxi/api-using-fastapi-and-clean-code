@@ -1,8 +1,8 @@
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from models.product_model import Product
-from schemas.product_schemas import ProductCreateSchema, ProductUpdateSchema
+from models.product import Product
+from schemas.product_schema import ProductCreateSchema, ProductUpdateSchema
 
 
 def get_products(session: Session, limit: int, skip: int) -> list[Product]:

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import uvicorn
 
-from routes import users_routes, product_routes
+from routes import products_routes, users_routes
 # from db.db import Base, engine
 # from models import order_model, product_model, user_model
 
@@ -11,11 +11,10 @@ app = FastAPI(
     version="1.0",
 )
 
-app.include_router(router=users_routes.users_router, prefix="/users")
-app.include_router(router=product_routes.products_router, prefix="/products")
+app.include_router(router=users_routes.users_router, prefix="/api/v1/users")
+app.include_router(router=products_routes.products_router, prefix="/api/v1/products")
 
 
 if __name__ == "__main__":
     # Base.metadata.create_all(engine)
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
-

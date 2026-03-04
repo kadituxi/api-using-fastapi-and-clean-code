@@ -3,8 +3,8 @@ from typing import Optional
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from models.user_model import User
-from schemas.users_schemas import RegisterUserSchema
+from models.user import User
+from schemas.user_schema import RegisterUserSchema
 
 
 def get_user_by_email(email: str, session: Session) -> Optional[User]:

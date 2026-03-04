@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
 from db.db import get_session
-from schemas.product_schemas import (
+from schemas.product_schema import (
     ProductCreateSchema,
     ProductResponseSchema,
     ProductUpdateSchema,
